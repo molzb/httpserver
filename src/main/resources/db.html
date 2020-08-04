@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>SQL Frontend</title>
+	<link   rel="stylesheet"    href="db.css" type="text/css">
+	<link   rel="shortcut icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAjVBMVEX+YgD+bRL+u5D+sYH+nmH+mlv+/fv+vpX+qnb+qHL+dR/+ag7+/v7+07f+rnv+mFj+kUz+jkj+hDf+dyP+cRn++/n+4c/+3cj+1bv+z7D+yKX+xaH+wpz+wJj+toj+pm/+lFH+ikH+Zwj+8+v+6Nr+5dX+2sT+zKz+t4v+tIb+oWb+gC/+eyn+ZQX+7eHWCq6xAAAAqUlEQVQY03XNNRLDQBBE0WUUM5PF4Psfz1W7Sj3Zf8E0+HcUaSoGcsC3m21Y83nBfWtbibON4BjTKrCAovpxRdhlU2eBB26TYoaKrDANXZh8eenk7eJbmE/NOungPY0NaO+OWMadrUwvA2RVwOP1RBC2PwdFcZMz8nGRNEB9KDFHRFSSGgjklYDo47AAJHal1EcMRi+cXgC+8vxQx/fYCwt1CB5VVD3ZwQ/Mgwu8Y6fuswAAAABJRU5ErkJggg==" />
+	<script src="db.js"></script>
+</head>
+<body>
+	<div id="container">
+		<header id="header">
+			<h1>SQL Frontend<img src="ing.png" alt="ING"></h1>
+			SQL: 
+			<input  id="txtSql" type="text"   onkeyup="keyupSql(event)" placeholder="e.g. SELECT * FROM APPL_LOG" />
+			<button id="btnSql" type="button" onclick="execSql($('#txtSql').value)">Go!</button>
+			<span   id="loading" class="hidden"></span>
+		</header>
+		<div id="sqlResult">
+			<div id="noResults" class="hidden">No results</div>
+			<div id="txtError"></div>
+			<div id="result"></div>
+			<div id="resultCount"></div>
+		</div>
+	</div>
+</body>
+</html>
